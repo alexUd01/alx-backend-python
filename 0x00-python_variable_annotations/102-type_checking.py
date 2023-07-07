@@ -6,6 +6,7 @@ from typing import List, Tuple, Sequence
 
 
 def zoom_array(lst: Tuple, factor: int = 2) -> List:
+    """ The function to correct """
     zoomed_in: Tuple = tuple([item for item in lst for i in range(factor)])
     return list(zoomed_in)
 
