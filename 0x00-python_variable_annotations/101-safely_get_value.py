@@ -2,6 +2,7 @@
 """ Annotation Exercice """
 from typing import Any, Mapping, Union
 
+
 def safely_get_value(
         dct: Mapping,
         key: Any,
