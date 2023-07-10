@@ -11,7 +11,7 @@ import asyncio
 from typing import Union
 
 
-async def wait_random(max_delay: int = 10) -> Union[float, int]:
+async def wait_random(max_delay: int = 10) -> float:
     """ The fuction """
     i = uniform(0, max_delay)
     await asyncio.sleep(i)
