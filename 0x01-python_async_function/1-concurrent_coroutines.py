@@ -12,7 +12,6 @@ of the delays should be in ascending order without using sort() because of
 concurrency.
 """
 import asyncio
-from random import uniform
 from typing import List
 
 
