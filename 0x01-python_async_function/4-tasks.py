@@ -4,7 +4,7 @@ The code is nearly identical to wait_n except task_wait_random is being
 called.
 """
 import asyncio
-from typing import List
+from typing import List, Union
 
 
 task_wait_random = __import__('3-tasks').task_wait_random
@@ -12,7 +12,6 @@ task_wait_random = __import__('3-tasks').task_wait_random
 
 async def task_wait_n(n: int, max_delay: int) -> List[float]:
     """ The async routine """
-    result = await asyncio.gather(
-        *tuple(map(lambda _: task_wait_random(max_delay), range(n)))
-    )
+    result = await asyncio.gather(*(task_wait_random(max_delay)
+                                    for i in range(n)))
     return sorted(result)
