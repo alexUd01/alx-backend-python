@@ -8,10 +8,10 @@ then yield a random number between 0 and 10. Use the random module.
 """
 from random import uniform
 import asyncio
-from typing import Generator
+from typing import AsyncGenerator
 
 
-async def async_generator() -> Generator[float, None, None]:
+async def async_generator() -> AsyncGenerator[float, None]:
     """ The async routine/function """
     for i in range(10):
         rand_num = uniform(0, 10)
